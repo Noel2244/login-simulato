@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureBank - Login</title>
+    <title>Login - SecureBank</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
         }
         .login-container h2 {
             text-align: center;
@@ -32,7 +32,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .btn-login {
+        .btn-submit {
             width: 100%;
             padding: 10px;
             background-color: #4CAF50;
@@ -42,35 +42,38 @@
             cursor: pointer;
             font-size: 16px;
         }
-        .btn-login:hover {
+        .btn-submit:hover {
             background-color: #45a049;
         }
-        .forgot-password {
+        .register-link {
+            display: block;
             text-align: center;
             margin-top: 10px;
-        }
-        .forgot-password a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .forgot-password a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <div class="login-container">
-        <h2>SecureBank Login</h2>
+        <h2>Accedi al tuo Account</h2>
         <form action="http://fake-login-process.com" method="POST">
-            <input type="email" class="input-field" placeholder="Email" name="email" required><br>
-            <input type="password" class="input-field" placeholder="Password" name="password" required><br>
-            <button type="submit" class="btn-login">Accedi</button>
+            <!-- Nome Utente -->
+            <label for="username">Nome Utente:</label>
+            <input type="text" class="input-field" id="username" name="username" placeholder="Inserisci il tuo nome utente" required><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" class="input-field" id="password" name="password" placeholder="Inserisci la tua password" required><br>
+
+            <!-- Bottone di login -->
+            <button type="submit" class="btn-submit">Accedi</button>
         </form>
-        <div class="forgot-password">
-            <p><a href="#">Hai dimenticato la password?</a></p>
+
+        <div class="register-link">
+            <p><a href="verifica.html">Vai alla verifica del tuo account</a></p>
         </div>
     </div>
 
 </body>
 </html>
+
